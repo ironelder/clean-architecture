@@ -3,7 +3,6 @@
 
     <style name="Theme.CleanArchitecture" parent="android:Theme.Material.Light.NoActionBar" />
 
-
     <style name="Theme.MySplashScreen" parent="Theme.CleanArchitecture">
         <item name="android:windowBackground">@color/pink_40</item>
         <item name="android:windowSplashScreenAnimatedIcon" tools:targetApi="s">@color/pink_40</item>
