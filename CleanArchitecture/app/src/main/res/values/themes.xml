@@ -5,7 +5,7 @@
 
 
     <style name="Theme.MySplashScreen" parent="Theme.CleanArchitecture">
-        <item name="android:windowBackground">@color/purple_200</item>
-        <item name="android:windowSplashScreenAnimatedIcon" tools:targetApi="s">@color/purple_200</item>
+        <item name="android:windowBackground">@color/pink_40</item>
+        <item name="android:windowSplashScreenAnimatedIcon" tools:targetApi="s">@color/pink_40</item>
     </style>
 </resources>
