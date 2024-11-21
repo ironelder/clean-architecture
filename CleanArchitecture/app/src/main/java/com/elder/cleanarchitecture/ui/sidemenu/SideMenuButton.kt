@@ -25,7 +25,6 @@ fun SideMenuButton(onClick: () -> Unit) {
             hoveredElevation = 0.dp // 호버 상태 그림자 제거
         ),
         containerColor = Color.Transparent,
-        interactionSource = remember { MutableInteractionSource() },
         onClick = onClick
     ) {
         Icon(imageVector = Icons.Default.Menu, contentDescription = "Menu")
