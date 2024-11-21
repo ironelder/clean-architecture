@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "CleanArchitecture"
 include(":app")
+include(":mvi-base")
