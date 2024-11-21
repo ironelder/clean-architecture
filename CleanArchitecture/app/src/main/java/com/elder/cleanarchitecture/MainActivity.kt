@@ -44,31 +44,34 @@ fun MainScreenView() {
     val drawerState = rememberDrawerState(initialValue = DrawerValue.Closed)
     val scope = rememberCoroutineScope()
 
-    ModalNavigationDrawer(
-        drawerState = drawerState,
-        gesturesEnabled = true,
-        drawerContent = { SideMenuDrawer() }
-    ) {
-        Scaffold(
-            modifier = Modifier.fillMaxSize(),
-            topBar = {
-            },
-            bottomBar = { BottomTabNavigation(navHostController = navController) }
-        ) { innerPadding ->
-            Box(modifier = Modifier.padding(innerPadding)) {
-                BottomNavigationGraph(navController = navController)
-                SideMenuButton {
-                    scope.launch {
-                        if (drawerState.isOpen) {
-                            drawerState.close()
-                        } else {
-                            drawerState.open()
+    CleanArchitectureTheme {
+        ModalNavigationDrawer(
+            drawerState = drawerState,
+            gesturesEnabled = true,
+            drawerContent = { SideMenuDrawer() }
+        ) {
+            Scaffold(
+                modifier = Modifier.fillMaxSize(),
+                topBar = {
+                },
+                bottomBar = { BottomTabNavigation(navHostController = navController) }
+            ) { innerPadding ->
+                Box(modifier = Modifier.padding(innerPadding)) {
+                    BottomNavigationGraph(navController = navController)
+                    SideMenuButton {
+                        scope.launch {
+                            if (drawerState.isOpen) {
+                                drawerState.close()
+                            } else {
+                                drawerState.open()
+                            }
                         }
                     }
                 }
             }
         }
     }
+
 
 }
 
